@@ -9,3 +9,20 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+.Count{
+    margin: 30px;
+    color: gray;
+}
+
+.Button{
+    background-color: black;
+    border-color: gray;
+    color: white;
+    margin-top: 30px;
+    width: 30px;
+}
+
+.Carrito{
+    margin-top: 20px;
+    background-color: pink;
+}
