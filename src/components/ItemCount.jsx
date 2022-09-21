@@ -11,7 +11,7 @@ function ItemCount(props){
     }
 
     function handleSubstract(){
-        if (count > 1){
+        if (count > props.initial){
             setCount(count - 1);
         }
     }
@@ -21,9 +21,6 @@ function ItemCount(props){
             <button onClick={handleAdd} className="Button">+</button>
             <span className="Count">{count}</span>
             <button onClick={handleSubstract} className="Button">-</button>
-            <div>
-                <button className="Carrito">Agregar al carrito</button>
-            </div>
         </div>
     
     );

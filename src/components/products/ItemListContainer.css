@@ -10,19 +10,39 @@
 }
 
 .Count{
-    margin: 30px;
-    color: gray;
+    margin: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .Button{
-    background-color: black;
+    background-color: gray;
     border-color: gray;
-    color: white;
-    margin-top: 30px;
+    color: black;
+    margin-bottom: 10px;
     width: 30px;
 }
 
 .Carrito{
     margin-top: 20px;
     background-color: pink;
+}
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.greeting{
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslategrey;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

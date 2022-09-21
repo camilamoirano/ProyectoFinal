@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer greeting="Ecommerce de Productos de Cerámica"/>
-      <ItemCount initial={1} stock={10}/>
     </div>
   );
 }

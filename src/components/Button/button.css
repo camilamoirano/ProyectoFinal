@@ -1,0 +1,13 @@
+.btn{
+  padding: 5px 10px;
+  color: darkslategrey;
+  max-width: 150px;
+  background-color: pink;
+  border-radius:  5px; 
+  display: flex;
+  margin-left: 23%;
+  margin-bottom: 10px;
+  justify-content: center;
+  justify-items: center;
+  font-family: 'Times New Roman', Times, serif;
+}
