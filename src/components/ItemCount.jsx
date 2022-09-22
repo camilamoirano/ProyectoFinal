@@ -18,9 +18,9 @@ function ItemCount(props){
 
     return (
         <div>
-            <button onClick={handleAdd} className="Button">+</button>
-            <span className="Count">{count}</span>
             <button onClick={handleSubstract} className="Button">-</button>
+            <span className="Count">{count}</span>
+            <button onClick={handleAdd} className="Button">+</button>
         </div>
     
     );
