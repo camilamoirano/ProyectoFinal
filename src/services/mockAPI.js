@@ -44,7 +44,7 @@ const data = [
         title: "Maceta Irregular",
         price: 4300,
         stock: 10,
-        category: "Plantas",
+        category: "Decorativos",
         img: "https://i.pinimg.com/564x/ac/01/e6/ac01e6018da324f956aba8836aa78a97.jpg"
     }
 ]
@@ -57,10 +57,24 @@ export default function getItems (){
     }) 
 }
 
+export function getItemsByCategory (cat){
+   return new Promise ((resolve, reject) => {
+    
+    let itemFind = data.filter((item) => {
+        return item.category === cat;
+    });
+    setTimeout( () => {
+        console.log("Encontramos:", itemFind)
+        if (itemFind) resolve (itemFind);
+        else reject (new Error("Item no encontrado"));
+    }, 1500)
+   });
+}
+
 export function getSingleItem(idItem) {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            let itemFind = data.find (item => item.id === idItem)
+            let itemFind = data.find (item => item.id === Number(idItem))
             if (itemFind)
                 resolve (itemFind);
             else 
@@ -68,4 +82,3 @@ export function getSingleItem(idItem) {
         }, 1500);
     });
 }
- 

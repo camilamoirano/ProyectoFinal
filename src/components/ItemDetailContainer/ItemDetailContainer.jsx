@@ -1,23 +1,23 @@
 import React, {useState, useEffect} from "react";
 import { getSingleItem } from "../../services/mockAPI";
 import "bootstrap/dist/css/bootstrap.css"
-import ItemDetail from "./ItemDetail";
-import Item from "../Products/Item";
+import { useParams } from "react-router-dom";
+import Card from "./Card";
 
 
 function ItemDetailContainer (){
     let [data, setData] = useState ({});
 
+    const { id } = useParams();
+
     useEffect(() => {
-        getSingleItem(2).then((respuestaDatos) => {
-            setData(respuestaDatos);
-        });
-    }, []);
+        getSingleItem(id).then((respuestaDatos) => setData(respuestaDatos));
+    }, [id]);
 
     return (
         <div>
                 <div className="mainContainer">
-                    <Item
+                    <Card
                         key={data.id}
                         price={data.price}
                         title={data.title}

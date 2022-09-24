@@ -2,26 +2,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown }  from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.css";
 import * as bootstrap from 'bootstrap';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css"
 
 function NavBar() {
     return (
         <div className="Item">
             <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">MudArt</a>
+                <Link className="navbar-brand" to="#">MudArt</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Productos</a>
+                    <Link className="nav-link" to="/categoria/Decorativos">Decorativos</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Servicios</a>
+                    <Link className="nav-link" to="/categoria/Utilitarios">Utilitarios</Link>
                     </li>
                 </ul>
                 </div>

@@ -1,11 +1,10 @@
 import React from "react";
 import Button from "../Button/Button";
-import "./item.css";
-import {Link} from "react-router-dom";
+import "../Products/item.css";
+import ItemCount from "../ItemCount";
 
-function Item(props) {
-  let { price, title, img, category } = props;
-  const urlDetalle = `/producto/${props.id}`; 
+function Card(props) {
+  let { price, title, img, category, stock } = props;
 
   return (
     <div className="card">
@@ -17,11 +16,10 @@ function Item(props) {
         <p>{category}</p>
         <h4>$ {price}</h4>
       </div>
-      <Link to={urlDetalle}>
-        <Button>Ver más</Button>
-      </Link>
+      <ItemCount initial={1} stock={stock}/>
+      <Button>Agregar al carrito</Button>
     </div>
   );
 }
 
-export default Item;
+export default Card;
