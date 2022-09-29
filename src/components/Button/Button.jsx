@@ -1,11 +1,21 @@
 import React from 'react'
 import "./button.css";
+import { useState } from 'react';
 
-function Button({color, children}) {
+function Button(props) {
+  let [color, setColor] = useState("pink");
+
+  function handleClick (){
+    props.onClick();
+    setColor("gray");
+  }
+
   return (
-    <button className="btn">
-      {children}
-      </button>
+    <button className="universal"
+            onClick={handleClick}
+            style={{background: color}}>
+      {props.children}
+    </button>
   )
 }
 

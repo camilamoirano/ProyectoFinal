@@ -23,6 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
 }
 
 .card:hover{
@@ -39,3 +40,4 @@
 small{
   color: #8c8c8e;
 }
+

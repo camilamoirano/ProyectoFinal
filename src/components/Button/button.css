@@ -10,4 +10,27 @@
   justify-content: center;
   justify-items: center;
   font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+
+.universal{
+  padding: 5px 10px;
+  color: darkslategrey;
+  max-width: 150px;
+  background-color: pink;
+  border-radius:  10px; 
+  border-color: gainsboro;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+
+
+
+.link{
+  display: flex;
+  margin-left: 38%;
+  text-decoration: none;
+  justify-items: center;
+  max-height: 50px;
 }

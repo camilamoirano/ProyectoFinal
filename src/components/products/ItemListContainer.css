@@ -15,13 +15,6 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.Button{
-    background-color: gray;
-    border-color: gray;
-    color: black;
-    margin-bottom: 10px;
-    width: 30px;
-}
 
 .Carrito{
     margin-top: 20px;
@@ -50,4 +43,11 @@
 
 .Body{  
     text-align: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
 }

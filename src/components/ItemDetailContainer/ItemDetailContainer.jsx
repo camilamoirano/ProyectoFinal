@@ -2,8 +2,7 @@ import React, {useState, useEffect} from "react";
 import { getSingleItem } from "../../services/mockAPI";
 import "bootstrap/dist/css/bootstrap.css"
 import { useParams } from "react-router-dom";
-import Card from "./Card";
-
+import ItemDetail from "./ItemDetail.jsx"
 
 function ItemDetailContainer (){
     let [data, setData] = useState ({});
@@ -17,7 +16,7 @@ function ItemDetailContainer (){
     return (
         <div>
                 <div className="mainContainer">
-                    <Card
+                    <ItemDetail
                         key={data.id}
                         price={data.price}
                         title={data.title}
