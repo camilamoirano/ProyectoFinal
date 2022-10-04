@@ -46,7 +46,48 @@ const data = [
         stock: 10,
         category: "Decorativos",
         img: "https://i.pinimg.com/564x/ac/01/e6/ac01e6018da324f956aba8836aa78a97.jpg"
-    }
+    },
+    {
+        id: 7,
+        title: "Jarrón Seth",
+        price: 5600,
+        stock: 10,
+        category: "Decorativos",
+        img: "https://i.pinimg.com/564x/bc/73/84/bc73849963d6f53d47088e2ab48ff3dc.jpg"
+    },
+    {
+        id: 8,
+        title: "Taza Zeta",
+        price: 1600,
+        stock: 10,
+        category: "Utilitarios",
+        img: "https://i.pinimg.com/564x/ae/7a/28/ae7a28333f655c0b4f442e1bd478d89f.jpg"
+    },
+    {
+        id: 9,
+        title: "Fuente Pacific",
+        price: 4500,
+        stock: 10,
+        category: "Utilitarios",
+        img: "https://i.pinimg.com/564x/66/22/a3/6622a3e1899c7109f4bdfa5b5b005e72.jpg"
+    },
+    {
+        id: 10,
+        title: "Jarrón Origen",
+        price: 7500,
+        stock: 10,
+        category: "Utilitarios",
+        img: "https://i.pinimg.com/564x/19/71/19/197119c62dfa631c61066ac862fc25c3.jpg"
+    },
+    {
+        id: 11,
+        title: "Jarrón Butter",
+        price: 7100,
+        stock: 10,
+        category: "Utilitarios",
+        img: "https://i.pinimg.com/564x/ca/80/d4/ca80d4c111521fe1c1630ee7d10788e5.jpg"
+    },
+
 ]
 
 export default function getItems (){

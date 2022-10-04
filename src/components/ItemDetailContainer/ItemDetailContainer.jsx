@@ -16,14 +16,11 @@ function ItemDetailContainer (){
     return (
         <div>
                 <div className="mainContainer">
-                    <ItemDetail
-                        key={data.id}
-                        price={data.price}
-                        title={data.title}
-                        img={data.img}
-                        category={data.category}
-                        stock={data.stock}
-                    />
+                {data.length < 0 ? (
+                    <h2>Cargando...</h2>
+                ) : (
+                    <ItemDetail item= {data}/>
+                )}
                 </div>
         </div>
     )

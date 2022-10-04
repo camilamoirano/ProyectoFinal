@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState} from "react";
 import "./Products/ItemListContainer.css"
 import Button from "./Button/Button";
 
-function ItemCount(props, onAddToCart){
-    const [count, setCount] = React.useState(props.initial);
+function ItemCount({stock, onAddToCart}){
+    const [count, setCount] = useState(1);
 
     function handleAdd() {
-        if (count < props.stock){
+        if (count < stock){
             setCount(count + 1);
         }
     }
 
     function handleSubstract(){
-        if (count > props.initial){
+        if (count > 1){
             setCount(count - 1);
         }
     }
@@ -25,7 +25,11 @@ function ItemCount(props, onAddToCart){
                 <Button onClick={handleAdd}>+</Button>
             </div>
             <div>
-                <Button onClick={props.onAddToCart}> Agregar al carrito </Button>
+                <Button onClick={() => {
+                        onAddToCart(count);
+                        }}>
+                    Agregar al carrito 
+                </Button>
             </div>
         </div>    
     );

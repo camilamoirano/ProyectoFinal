@@ -1,13 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown }  from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.css";
-import * as bootstrap from 'bootstrap';
+import { useContext } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
+import CartWidget from "./CartWidget/cartWidget";
 
 function NavBar() {
+    
     return (
+    
         <div className="Item">
             <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
@@ -28,7 +31,7 @@ function NavBar() {
                     </li>
                 </ul>
                 </div>
-                <FontAwesomeIcon icon={faCartArrowDown}/>
+                <CartWidget/>
             </div>
             </nav>
         </div>

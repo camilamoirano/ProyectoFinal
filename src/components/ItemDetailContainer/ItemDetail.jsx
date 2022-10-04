@@ -1,30 +1,29 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../Products/item.css";
 import ItemCount from "../ItemCount";
-import Button from "../Button/Button";
 import "../Products/ItemListContainer.css"
+import {cartContext} from "../../context/cartContext"
 
-function ItemDetail (props) {
-  let { price, title, img, category, stock } = props;
+function ItemDetail ({item}) {
 
-  let estadoCart = false;
+  const { addItem } = useContext(cartContext);
 
-  function handleAddToCart(){
-    alert("El producto ha sido agregado con éxito");
+  function handleAddToCart(count){
+    addItem(item, count)
   }
 
   return (
     <div className="card">
       <div className="card-img">
-        <img src={img} alt="card img"></img>
+        <img src={item.img} alt="card img"></img>
       </div>
       <div className="card-detail">
-        <h3>{title}</h3>
-        <p>{category}</p>
-        <h4>$ {price}</h4>
+        <h3>{item.title}</h3>
+        <p>{item.category}</p>
+        <h4>$ {item.price}</h4>
       </div>
       <div className="botones">
-        { estadoCart === false? <ItemCount initial={1} onAddToCart={handleAddToCart} stock={stock} /> : <Button>Finalizar Compra</Button>}
+      <ItemCount initial={1} onAddToCart={handleAddToCart} stock={item.stock} />
       </div>
       
     </div>
