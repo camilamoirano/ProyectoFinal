@@ -40,12 +40,13 @@ export default function CartContextProvider ({children}) {
         return setCart(cart.filter(item => item.id !== id));
     }
 
-    function getItemPrice(){
+    function getItemsTotalPrice(){
         return cart.reduce((acc, item) => acc += item.price * item.count, 0);
     }
 
+
     return(
-        <cartContext.Provider value={{cart, addItem, getTotalItemsInCart, isInCart, emptyCart, deleteItem, getItemPrice}}>
+        <cartContext.Provider value={{cart, addItem, getTotalItemsInCart, isInCart, emptyCart, deleteItem, getItemsTotalPrice}}>
             {children}
         </cartContext.Provider>
     )

@@ -3,12 +3,13 @@ const data = [
         id: 1,
         title: "Jarrón Circle",
         price: 5300,
-        stock: 10,
+        stock: 0,
         category: "Decorativos",
         img: "https://i.pinimg.com/564x/7b/e9/c5/7be9c5e2afee85e6cf32093bec345020.jpg"
     },
     {
         id: 2,
+        offer: true,
         title: "Tazón Hita",
         price: 2300,
         stock: 10,
@@ -76,7 +77,7 @@ const data = [
         title: "Jarrón Origen",
         price: 7500,
         stock: 10,
-        category: "Utilitarios",
+        category: "Decorativos",
         img: "https://i.pinimg.com/564x/19/71/19/197119c62dfa631c61066ac862fc25c3.jpg"
     },
     {
@@ -84,7 +85,7 @@ const data = [
         title: "Jarrón Butter",
         price: 7100,
         stock: 10,
-        category: "Utilitarios",
+        category: "Decorativos",
         img: "https://i.pinimg.com/564x/ca/80/d4/ca80d4c111521fe1c1630ee7d10788e5.jpg"
     },
 

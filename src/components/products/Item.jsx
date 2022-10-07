@@ -5,8 +5,9 @@ import "./item.css";
 import {Link} from "react-router-dom";
 
 function Item(props) {
-  let { price, title, img, category } = props;
+  let { price, title, img, category} = props;
   const urlDetalle = `/producto/${props.id}`; 
+  
 
   return (
     <div className="card">

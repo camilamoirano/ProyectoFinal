@@ -12,7 +12,7 @@ export default function CartWidget() {
         <Link to={"/cart"}>
             <div>
                 <FontAwesomeIcon className="cart-icono" icon={faCartArrowDown}/>
-                <div className="display">{getTotalItemsInCart()}</div>
+                <div className={getTotalItemsInCart() <= 0 ? 'display-none' : 'display'}>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</div>
             </div>
         </Link>
     )

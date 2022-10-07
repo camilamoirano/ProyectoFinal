@@ -51,3 +51,13 @@
     justify-items: center;
     display: flex;
 }
+
+.loader{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslategrey;
+    margin-top: 15rem;
+    font-size: 1em;
+}

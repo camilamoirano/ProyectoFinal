@@ -1,11 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartArrowDown }  from "@fortawesome/free-solid-svg-icons";
+
 import "bootstrap/dist/css/bootstrap.css";
-import { useContext } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
-import CartWidget from "./CartWidget/cartWidget";
+import CartWidget from "./Cart/cartWidget.jsx";
 
 function NavBar() {
     
