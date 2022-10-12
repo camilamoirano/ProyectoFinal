@@ -24,6 +24,7 @@ function Cart() {
 
   return (
     <div className="cartViewContainer">
+      <h2 className="cartName">Tu carrito de compras:</h2>
       <div>
         {cart.map(item => (
           <div classNAme="cartItem" key={item.id}>
@@ -43,7 +44,7 @@ function Cart() {
         ))}
       </div>
       <h2 className="cartTotal">Total: ${getItemsTotalPrice()}</h2>
-      <div>
+      <div className="botonesCart">
         <Button onClick={emptyCart}>Vaciar carrito</Button>
         <Button>Finalizar Compra</Button>
       </div>

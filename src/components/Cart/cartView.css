@@ -20,7 +20,14 @@
     font-size: 15px;
 }
 
+.cartName{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    color: darkslategrey;
+}
+
 .cartViewContainer{
+    background-color: #F6F7F8;
     display: flex;
     flex-direction: column;
     justify-content: right;
@@ -28,6 +35,7 @@
     padding: 2rem 2rem;
     margin: 1rem;
     gap: 3rem;
+    margin-left: 20px;
 }
 
 .cartItem{
@@ -63,3 +71,4 @@
     color: darkslategrey;
     font-size: 1.5em;
 }
+

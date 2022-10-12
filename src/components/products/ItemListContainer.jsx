@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useEffect } from "react";
 import "./ItemListContainer.css"
-import getItems, { getItemsByCategory} from "../../services/mockAPI";
+import  {getItems, getItemsByCategory} from "../../services/firestore";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { Waveform } from '@uiball/loaders'

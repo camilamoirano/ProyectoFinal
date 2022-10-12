@@ -1,15 +1,11 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.css";
-
 import ItemListContainer from "./components/Products/ItemListContainer";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from "./components/Cart/cartView.jsx";
 import CartContextProvider from './context/cartContext';
-
-
 
 
 function App() {
