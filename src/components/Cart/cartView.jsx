@@ -2,14 +2,18 @@
 import React from 'react';
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext.jsx"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../Button/Button.jsx'; 
 import "./cartView.css"
+import { createBuyOrder } from '../../services/firestore.js';
+import CheckoutForm from '../CheckoutForm/CheckoutForm.jsx';
+
 
 
 function Cart() {
   const context = useContext(cartContext);
   const { cart, deleteItem, emptyCart, getItemsTotalPrice } = context;
+  
   
 
   if (cart.length === 0) {
@@ -46,11 +50,11 @@ function Cart() {
       <h2 className="cartTotal">Total: ${getItemsTotalPrice()}</h2>
       <div className="botonesCart">
         <Button onClick={emptyCart}>Vaciar carrito</Button>
-        <Button>Finalizar Compra</Button>
       </div>
-     
+     <CheckoutForm/>
     </div>
   )
 }
 
 export default Cart
+

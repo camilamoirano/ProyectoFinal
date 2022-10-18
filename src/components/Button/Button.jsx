@@ -6,7 +6,7 @@ function Button(props) {
   let [color, setColor] = useState("pink");
 
   function handleClick (){
-    props.onClick();
+    props.onClick && props.onClick();
     setColor("gray");
   }
 
