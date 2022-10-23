@@ -1,4 +1,3 @@
-
 import React, { useState, createContext } from "react";
 
 const cartContext = createContext();
@@ -32,7 +31,7 @@ export default function CartContextProvider ({children}) {
     }
 
     function isInCart (id){
-        let found = cart.some( item => item.id === id);
+        const found = cart.some( item => item.id === id);
         return found;
     }
 

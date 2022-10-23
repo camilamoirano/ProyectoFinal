@@ -19,56 +19,52 @@
     margin: 100px;
     font-size: 15px;
 }
-
-.cartName{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
-    color: darkslategrey;
-}
-
-.cartViewContainer{
-    background-color: #F6F7F8;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: left;
-    padding: 2rem 2rem;
-    margin: 1rem;
-    gap: 3rem;
-    margin-left: 20px;
-}
-
-.cartItem{
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-}
-
-.cartDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.cartTitle{
-    font-size: 1.5em;
-    font-family: 'Times New Roman', Times, serif;
-    color: darkslategrey;
-}
-
-.cartInfo{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: darkslategrey;
-    font-size: 1.2em;
-}
-
+.cartList{
+    border-spacing: 0;
+    width: 95%;
+    margin: 15px auto;
+    text-align: center;
+  }
+  
+  .cartList_head{
+    background-color: pink;
+    margin: 8px auto;
+  }
+  
+  .cartList_row{
+    line-height: 46px;
+  }
 .cartTotal{
     font-family: 'Times New Roman', Times, serif;
     color: darkslategrey;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+    margin-top: 70px;
 }
 
+.botonesCart{
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+}
+
+.cartView{
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslategrey;
+}
+
+.carrito{
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: start;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.boton{
+    background-color: white;
+    color: darkslategray;
+    border-color: white;
+}

@@ -2,12 +2,9 @@
 import React from 'react';
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext.jsx"
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button.jsx'; 
 import "./cartView.css"
-import { createBuyOrder } from '../../services/firestore.js';
-import CheckoutForm from '../CheckoutForm/CheckoutForm.jsx';
-
 
 
 function Cart() {
@@ -27,31 +24,45 @@ function Cart() {
   }
 
   return (
-    <div className="cartViewContainer">
-      <h2 className="cartName">Tu carrito de compras:</h2>
-      <div>
-        {cart.map(item => (
-          <div classNAme="cartItem" key={item.id}>
-            <div className="cartView-Img">
-              <img style={{maxWidth: 200, maxHeight: 200}} src={item.img} alt={item.title} />
-            </div>
-            <div classNAme="cartDescription">
-              <h2 className='cartTitle'>{item.title}</h2>
-              <div className='cartInfo'>
-                <p>${item.price}</p>
-                <p>Cantidad: {item.count}</p>
-              </div>
-              
-              <Button onClick={() => deleteItem(item.id)}>Eliminar producto</Button>
-            </div>
-          </div>
-        ))}
-      </div>
-      <h2 className="cartTotal">Total: ${getItemsTotalPrice()}</h2>
+    <div className='cartView'>
+      <h1 className='carrito'>Tu Carrito:</h1>
+      <table className="cartList">
+        <thead className="cartList_head">
+          <tr className="cartList_row">
+            <th>Miniatura</th>
+            <th>Titulo</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Remover</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cart.map((item) => {
+            return (
+              <tr key={item.id} className="cartList_row">
+                <td>
+                  <img height={50} src={item.img} alt={item.title} />
+                </td>
+                <td>{item.title}</td>
+                <td>$ {item.price}</td>
+                <td>{item.count}</td>
+                <td>
+                  <button onClick={() => deleteItem(item.id)} className="boton">X</button>
+                </td>
+                <th>$ {item.price * item.count}</th>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <h2 className="cartTotal">El total de su compra es: ${getItemsTotalPrice()}</h2>
       <div className="botonesCart">
         <Button onClick={emptyCart}>Vaciar carrito</Button>
+        <Link to="/form">
+          <Button>Finalizar compra</Button>
+        </Link>
       </div>
-     <CheckoutForm/>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from "./components/Cart/cartView.jsx";
 import CartContextProvider from './context/cartContext';
 import Checkout from './components/Checkout/Checkout';
-import { exportDataToFirestore } from './services/firestore';
+import Form from './components/Form/Form';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
           <Route path="/categoria/:cat" element={<ItemListContainer/>}/>
           <Route path="/cart" element={<Cart/>} />
           <Route path="/checkout/:orderid" element={<Checkout/>} />
+          <Route path="/form" element={<Form/>}/>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import Button from "../Button/Button";
 import { createBuyOrder } from "../../services/firestore";
+import "./CheckoutForm.css"
 
 export default function CheckoutForm(){
     const [dataForm, setDataForm] = useState({
@@ -14,7 +15,7 @@ export default function CheckoutForm(){
 
     const navigate = useNavigate();
     const context = useContext(cartContext);
-    const { cart, getItemsTotalPrice } = context;
+    const { cart, getItemsTotalPrice, emptyCart } = context;
 
     function handleCheckout(event){
         event.preventDefault();
@@ -30,8 +31,8 @@ export default function CheckoutForm(){
       }
 
     function inputChangeHandler(event){
-        let inputName = event.target.name;
-        let value = event.target.value;
+        const inputName = event.target.name;
+        const value = event.target.value;
 
         const newDataForm = { ...dataForm };
         newDataForm[inputName] = value;
@@ -40,9 +41,10 @@ export default function CheckoutForm(){
 
     return(
         <div className="form-container">
+        <h2 className="datos">Completá tus datos para realizar la orden:</h2>
         <form onSubmit={handleCheckout}>
           <div className="form-item">
-            <label htmlFor="name">Nombre</label>
+            
             <input
               value={dataForm.name}
               onChange={inputChangeHandler}
@@ -50,11 +52,12 @@ export default function CheckoutForm(){
               type="text"
               placeholder="Nombre"
               required
+              className="inp"
             />
           </div>
   
           <div className="form-item">
-            <label htmlFor="telefono">Telefono</label>
+            
             <input
               value={dataForm.phone}
               onChange={inputChangeHandler}
@@ -62,11 +65,12 @@ export default function CheckoutForm(){
               type="text"
               placeholder="Telefono"
               required
+              className="inp"
             />
           </div>
   
           <div className="form-item">
-            <label htmlFor="email">Email</label>
+            
             <input
               value={dataForm.email}
               onChange={inputChangeHandler}
@@ -74,9 +78,13 @@ export default function CheckoutForm(){
               type="text"
               placeholder="Correo"
               required
+              className="inp"
             />
           </div>
-          <Button type="submit">Finalizar Compra</Button>
+        <div className="enviar">
+        <Button type="submit" onClick={emptyCart}>Enviar pedido</Button>
+        </div>
+          
         </form>
       </div>
     )
